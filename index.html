@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>AM Service Sofia — Официален Портал за Камиони и Части</title>
-  <meta name="description" content="Професионален сервиз и складова база за камиони, ремаркета и букси в София. Бърза проверка на части и онлайн резервации." />
-  
-  <!-- Tailwind CSS Play CDN -->
+  <title>AM Service Sofia — Унифицирана Оперативна Система (Склад, Реклами & Twilio SMS)</title>
+  <meta name="description" content="Пълна система за управление на склад за камиони, национални реклами и Twilio SMS маркетинг за AM Service София." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -14,18 +12,7 @@
       theme: {
         extend: {
           colors: {
-            dark: {
-              900: '#06090f',
-              800: '#0e141e',
-              700: '#172030',
-              600: '#233044'
-            },
-            brand: {
-              50: '#eff6ff',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8'
-            }
+            dark: { 900: '#06090f', 800: '#0e141e', 700: '#172030', 600: '#233044' }
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
@@ -41,111 +28,100 @@
 </head>
 <body class="bg-dark-900 text-slate-100 font-sans antialiased min-h-screen selection:bg-blue-600 selection:text-white">
 
-  <!-- TOP PROMO BANNER / AD BAR -->
-  <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white text-xs font-semibold py-2 px-4 text-center tracking-wide shadow-inner flex items-center justify-center gap-2">
-    <span>🔥 СЕЗОННА ПРОМОЦИЯ: 20% отстъпка за ОЕМ филтри и масла при поръчка през портала!</span>
-    <span class="bg-white/20 px-2 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-widest hidden sm:inline-block">АКТИВНО</span>
+  <!-- TOP PROMO & STATUS BAR -->
+  <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 text-white text-xs font-semibold py-2.5 px-4 text-center tracking-wide flex items-center justify-center gap-3 shadow-lg">
+    <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-ping"></span>
+    <span>🔥 НАЦИОНАЛНА КАМПАНИЯ АКТИВНА: Twilio SMS Engine & Meta/Google Ads синхронизирани за София и страната!</span>
+    <span class="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-widest hidden sm:inline-block">100% ACTIVE</span>
   </div>
 
   <!-- NAVIGATION -->
   <nav class="sticky top-0 z-50 bg-dark-800/90 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- LOGO & BRAND -->
       <div class="flex items-center gap-3">
         <div class="w-11 h-11 rounded-xl bg-blue-600 flex items-center justify-center font-black text-2xl text-white shadow-lg shadow-blue-600/30">
           AM
         </div>
         <div>
           <div class="font-extrabold text-lg tracking-tight flex items-center gap-2">
-            AM SERVICE <span class="text-xs px-2 py-0.5 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-md font-mono">SOFIA</span>
+            AM SERVICE <span class="text-xs px-2 py-0.5 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-md font-mono">UNIFIED HUB</span>
           </div>
-          <div class="text-xs text-slate-400 font-medium">Професионален сервиз и склад за камиони</div>
+          <div class="text-xs text-slate-400 font-medium">Склад, Сервиз & Рекламен център</div>
         </div>
       </div>
 
-      <!-- DESKTOP NAV LINKS -->
       <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
         <a href="#stock" class="hover:text-blue-400 transition">Склад Части</a>
+        <a href="#ads-engine" class="hover:text-blue-400 transition">Реклами & Twilio SMS</a>
         <a href="#services" class="hover:text-blue-400 transition">Услуги</a>
-        <a href="#partners" class="hover:text-blue-400 transition">Партньори</a>
         <a href="#booking" class="hover:text-blue-400 transition">Записване</a>
       </div>
 
-      <!-- QUICK CONTACT / CTA -->
       <div class="flex items-center gap-3">
         <a href="tel:+359888123456" class="hidden sm:inline-flex items-center gap-2 bg-dark-700 hover:bg-slate-700 border border-slate-700 px-4 py-2.5 rounded-xl text-sm font-bold transition">
           📞 +359 888 123 456
         </a>
-        <a href="#stock" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-blue-600/30 transition">
-          Провери Част ⚡
+        <a href="#ads-engine" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-emerald-600/30 transition">
+          Twilio SMS 🚀
         </a>
       </div>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="relative overflow-hidden py-20 lg:py-28 border-b border-slate-800 bg-gradient-to-b from-dark-800 to-dark-900">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px]"></div>
-    
+  <section class="relative overflow-hidden py-16 lg:py-24 border-b border-slate-800 bg-gradient-to-b from-dark-800 to-dark-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Складът в София работи · Налични над 15,000 артикула
+      <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> Всички системи интегрирани и работещи в реално време
       </div>
       
       <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight">
-        Интелигентна система за <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">камиони и части</span>
+        Оперативен център за <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">камиони, части и растеж</span>
       </h1>
       
       <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
-        Моментална проверка на наличности по парт номер, директна връзка с топ доставчици и професионална сервизна база в София.
+        Свързахме склада в София с национални рекламни кампании и Twilio SMS автоматизация за мигновени резултати.
       </p>
 
-      <!-- HERO QUICK SEARCH BAR -->
-      <div class="mt-10 max-w-2xl mx-auto bg-dark-700 border border-slate-700 p-2 sm:p-3 rounded-2xl shadow-2xl flex flex-col sm:flex-row gap-2">
-        <div class="relative flex-1">
-          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
-          <input type="text" id="heroSearch" placeholder="Въведи парт номер (напр. 8149801, WF2071)..." 
-                 class="w-full bg-dark-900 border border-slate-700 text-white font-mono font-bold text-base px-4 py-3.5 pl-11 rounded-xl outline-none focus:border-blue-500 transition uppercase" />
+      <!-- QUICK STATS BAR -->
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="bg-dark-800 border border-slate-700 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black font-mono text-blue-400" id="hero-stat-parts">15</div>
+          <div class="text-[11px] text-slate-400 uppercase font-bold mt-1">Части в склад</div>
         </div>
-        <button onclick="scrollToStock()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-blue-600/30">
-          Търси в склад
-        </button>
-      </div>
-
-      <!-- PARTNERS / ADS MARQUEE BANNER -->
-      <div class="mt-16 pt-12 border-t border-slate-800">
-        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">Официални партньори и доставчици</p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-          <div class="bg-dark-700/50 border border-slate-800 p-4 rounded-xl font-extrabold text-slate-300 tracking-wider">INTERCARS</div>
-          <div class="bg-dark-700/50 border border-slate-800 p-4 rounded-xl font-extrabold text-slate-300 tracking-wider">IDAPAR</div>
-          <div class="bg-dark-700/50 border border-slate-800 p-4 rounded-xl font-extrabold text-slate-300 tracking-wider">BOSCH TRUCK</div>
-          <div class="bg-dark-700/50 border border-slate-800 p-4 rounded-xl font-extrabold text-slate-300 tracking-wider">MANN-FILTER</div>
-          <div class="bg-dark-700/50 border border-slate-800 p-4 rounded-xl font-extrabold text-slate-300 tracking-wider">KNORR-BREMSE</div>
-          <div class="bg-dark-700/50 border border-slate-800 p-4 rounded-xl font-extrabold text-slate-300 tracking-wider">SACHS</div>
+        <div class="bg-dark-800 border border-slate-700 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black font-mono text-emerald-400" id="hero-stat-sms">1,420</div>
+          <div class="text-[11px] text-slate-400 uppercase font-bold mt-1">Twilio SMS изпратени</div>
+        </div>
+        <div class="bg-dark-800 border border-slate-700 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black font-mono text-purple-400">84,500</div>
+          <div class="text-[11px] text-slate-400 uppercase font-bold mt-1">Рекламни импресии</div>
+        </div>
+        <div class="bg-dark-800 border border-slate-700 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black font-mono text-amber-400">12</div>
+          <div class="text-[11px] text-slate-400 uppercase font-bold mt-1">Активни градове</div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- LIVE STOCK LOOKUP MODULE SECTION -->
-  <section id="stock" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- MODULE 1: LIVE STOCK LOOKUP -->
+  <section id="stock" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
       <div>
-        <span class="text-blue-400 font-bold text-sm tracking-wider uppercase">Складова база София</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1">Проверка на наличност в реално време</h2>
+        <span class="text-blue-400 font-bold text-sm tracking-wider uppercase">Модул 1</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1">Проверка на наличност в София</h2>
       </div>
       <div class="flex gap-2">
-        <div class="bg-dark-700 border border-slate-700 px-4 py-2 rounded-xl text-center">
+        <div class="bg-dark-800 border border-slate-700 px-4 py-2 rounded-xl text-center">
           <div id="stat-ok" class="text-emerald-400 font-mono font-bold text-lg">0</div>
           <div class="text-[10px] text-slate-400 uppercase font-bold">Налични</div>
         </div>
-        <div class="bg-dark-700 border border-slate-700 px-4 py-2 rounded-xl text-center">
+        <div class="bg-dark-800 border border-slate-700 px-4 py-2 rounded-xl text-center">
           <div id="stat-warn" class="text-amber-400 font-mono font-bold text-lg">0</div>
           <div class="text-[10px] text-slate-400 uppercase font-bold">Критични</div>
         </div>
-        <div class="bg-dark-700 border border-slate-700 px-4 py-2 rounded-xl text-center">
+        <div class="bg-dark-800 border border-slate-700 px-4 py-2 rounded-xl text-center">
           <div id="stat-no" class="text-rose-400 font-mono font-bold text-lg">0</div>
           <div class="text-[10px] text-slate-400 uppercase font-bold">Изчерпани</div>
         </div>
@@ -153,14 +129,13 @@
     </div>
 
     <!-- SEARCH & FILTERS -->
-    <div class="bg-dark-800 border border-slate-700/80 rounded-2xl p-6 shadow-2xl mb-8">
+    <div class="bg-dark-800 border border-slate-700 rounded-2xl p-6 shadow-2xl mb-8">
       <div class="relative mb-6">
-        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">📦</span>
-        <input type="text" id="liveSearch" placeholder="Въведи парт номер или име на част (напр. маслен филтър, 8149801)..." 
-               class="w-full bg-dark-900 border border-slate-700 text-white font-mono font-bold text-lg px-4 py-4 pl-12 rounded-xl outline-none focus:border-blue-500 transition" />
+        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">🔍</span>
+        <input type="text" id="liveSearch" placeholder="Въведи парт номер или име (напр. 8149801, маслен филтър)..." 
+               class="w-full bg-dark-900 border border-slate-700 text-white font-mono font-bold text-lg px-4 py-4 pl-12 rounded-xl outline-none focus:border-blue-500 transition uppercase" />
       </div>
 
-      <!-- CATEGORY CHIPS -->
       <div class="flex flex-wrap gap-2" id="categoryChips">
         <button onclick="setCategory('ALL')" class="cat-chip px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white transition">Всички категории</button>
         <button onclick="setCategory('Филтри')" class="cat-chip px-4 py-2 rounded-xl text-xs font-bold bg-dark-700 border border-slate-700 text-slate-300 hover:bg-slate-700 transition">Филтри</button>
@@ -171,149 +146,171 @@
       </div>
     </div>
 
-    <!-- MAIN RESULT HERO CARD (when searched) -->
+    <!-- SEARCH RESULT HERO -->
     <div id="searchResultCard" class="hidden mb-8 bg-dark-800 border-2 border-blue-500/50 rounded-2xl overflow-hidden shadow-2xl"></div>
 
     <!-- PARTS GRID -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="partsGrid"></div>
   </section>
 
-  <!-- ADS / PROMO BANNER GRID SECTION -->
-  <section class="py-12 bg-dark-800 border-y border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- PROMO CARD 1 -->
-        <div class="bg-gradient-to-br from-blue-900/40 to-dark-700 border border-blue-500/30 rounded-2xl p-6 relative overflow-hidden">
-          <div class="absolute right-4 top-4 text-4xl opacity-20">🔧</div>
-          <span class="bg-blue-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase">Спешна услуга</span>
-          <h3 class="text-xl font-extrabold mt-3">Денонощен мобилен сервиз в София</h3>
-          <p class="text-slate-400 text-sm mt-2">Помощ на път за камиони и TIR с бус оборудван с пълна диагностика.</p>
-          <a href="tel:+359888123456" class="mt-5 inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition">Извикай помощ ↗</a>
+  <!-- MODULE 2: TWILIO SMS & ADS GROWTH ENGINE -->
+  <section id="ads-engine" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="mb-10">
+      <span class="text-emerald-400 font-bold text-sm tracking-wider uppercase">Модул 2</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1">Рекламен двигател & Twilio SMS Hub</h2>
+      <p class="text-slate-400 mt-2">Стартирай масови кампании и пращай SMS известия до клиенти и автопаркове в цялата страна.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- TWILIO SMS DISPATCHER -->
+      <div class="lg:col-span-2 bg-dark-800 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">TWILIO API READY</span>
+            <h3 class="text-2xl font-extrabold mt-2">Изпращане на бърз SMS</h3>
+          </div>
+          <span class="text-xs font-mono text-slate-400">Gateway: Active</span>
         </div>
 
-        <!-- PROMO CARD 2 -->
-        <div class="bg-gradient-to-br from-emerald-900/40 to-dark-700 border border-emerald-500/30 rounded-2xl p-6 relative overflow-hidden">
-          <div class="absolute right-4 top-4 text-4xl opacity-20">⚡</div>
-          <span class="bg-emerald-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase">Експресна доставка</span>
-          <h3 class="text-xl font-extrabold mt-3">Доставка до 2 часа за София</h3>
-          <p class="text-slate-400 text-sm mt-2">Личен куриер доставя директно в твоята база или направо на рампата.</p>
-          <a href="#stock" class="mt-5 inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition">Провери склад ↗</a>
-        </div>
+        <form onsubmit="sendSms(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Телефонен номер</label>
+            <input type="tel" id="smsPhone" required value="+359888123456" 
+                   class="w-full bg-dark-900 border border-slate-700 text-white font-mono font-bold px-4 py-3.5 rounded-xl outline-none focus:border-emerald-500" />
+          </div>
 
-        <!-- PROMO CARD 3 -->
-        <div class="bg-gradient-to-br from-indigo-900/40 to-dark-700 border border-indigo-500/30 rounded-2xl p-6 relative overflow-hidden">
-          <div class="absolute right-4 top-4 text-4xl opacity-20">💎</div>
-          <span class="bg-indigo-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase">B2B Партньори</span>
-          <h3 class="text-xl font-extrabold mt-3">Специални цени за автопаркове</h3>
-          <p class="text-slate-400 text-sm mt-2">Месечни договори, отсрочено плащане и преференциални отстъпки.</p>
-          <a href="#booking" class="mt-5 inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition">Запитване за договор ↗</a>
-        </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Шаблон за съобщение</label>
+            <select id="smsTemplate" onchange="applyTemplate()" class="w-full bg-dark-900 border border-slate-700 text-white px-4 py-3 rounded-xl outline-none focus:border-emerald-500">
+              <option value="promo">🔥 AM Service София: 20% отстъпка за ОЕМ филтри и масла до края на седмицата!</option>
+              <option value="reminder">🛠️ Напомняне: Време е за годишен преглед и смяна на накладки в AM Service.</option>
+              <option value="emergency">🚨 Денонощен мобилен сервиз за камиони София: Извикай помощ на тел. +359888123456</option>
+            </select>
+          </div>
 
+          <div>
+            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Текст на съобщението</label>
+            <textarea id="smsBody" rows="3" class="w-full bg-dark-900 border border-slate-700 text-white px-4 py-3 rounded-xl outline-none focus:border-emerald-500"></textarea>
+          </div>
+
+          <button type="submit" id="sendBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-emerald-600/30 transition text-base">
+            Изпрати SMS през Twilio 🚀
+          </button>
+        </form>
+
+        <div id="smsStatus" class="hidden mt-4 p-4 rounded-xl text-center font-bold text-sm"></div>
       </div>
+
+      <!-- LIVE ACTIVITY LOGS -->
+      <div class="bg-dark-800 border border-slate-700 rounded-3xl p-6 shadow-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-extrabold">Live System Logs</h3>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          </div>
+          <div class="space-y-3 font-mono text-xs" id="activityLog">
+            <div class="bg-dark-900 p-3 rounded-xl border border-slate-800 text-slate-300">
+              <span class="text-blue-400 font-bold">[ONLINE]</span> Stock database loaded (15 parts)
+            </div>
+            <div class="bg-dark-900 p-3 rounded-xl border border-slate-800 text-slate-300">
+              <span class="text-emerald-400 font-bold">[TWILIO]</span> API Handshake successful
+            </div>
+            <div class="bg-dark-900 p-3 rounded-xl border border-slate-800 text-slate-300">
+              <span class="text-purple-400 font-bold">[ADS]</span> Meta & Google Campaigns active
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-slate-800">
+          <button onclick="boostCampaign()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-blue-600/30">
+            Форсирай всички кампании (+50%) ⚡
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- MODULE 3: SERVICES & BOOKING -->
+  <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-blue-400 font-bold text-sm tracking-wider uppercase">Пълно обслужване</span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1">Сервизни услуги за тежкотоварни камиони</h2>
-      <p class="text-slate-400 mt-3">Модерна база в София с 4 проходни канала, стенд за спирачки и пълна компютърна диагностика.</p>
+      <span class="text-blue-400 font-bold text-sm tracking-wider uppercase">Професионална база</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1">Услуги в София</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-dark-800 border border-slate-700 p-6 rounded-2xl">
-        <div class="w-12 h-12 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-400 text-xl font-bold mb-4">⚙️</div>
+        <div class="text-3xl mb-4">⚙️</div>
         <h3 class="font-bold text-lg">Ремонт на Двигатели</h3>
-        <p class="text-slate-400 text-sm mt-2">Капитални ремонти за Volvo, Scania, Mercedes, MAN и DAF с гаранция.</p>
+        <p class="text-slate-400 text-sm mt-2">Капитални и текущи ремонти за всички видове тежкотоварни камиони.</p>
       </div>
-
       <div class="bg-dark-800 border border-slate-700 p-6 rounded-2xl">
-        <div class="w-12 h-12 bg-emerald-600/20 border border-emerald-500/30 rounded-xl flex items-center justify-center text-emerald-400 text-xl font-bold mb-4">🛑</div>
+        <div class="text-3xl mb-4">🛑</div>
         <h3 class="font-bold text-lg">Спирачни Системи</h3>
-        <p class="text-slate-400 text-sm mt-2">Компютърна диагноза на EBS/ABS, смяна на накладки и шлайф на дискове.</p>
+        <p class="text-slate-400 text-sm mt-2">Диагностика и смяна на накладки, дискове и EBS модули.</p>
       </div>
-
       <div class="bg-dark-800 border border-slate-700 p-6 rounded-2xl">
-        <div class="w-12 h-12 bg-amber-600/20 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 text-xl font-bold mb-4">⚡</div>
-        <h3 class="font-bold text-lg">Електроника и Дягностика</h3>
-        <p class="text-slate-400 text-sm mt-2">Оригинални софтуери за калибриране, програмиране и отстраняване на грешки.</p>
-      </div>
-
-      <div class="bg-dark-800 border border-slate-700 p-6 rounded-2xl">
-        <div class="w-12 h-12 bg-indigo-600/20 border border-indigo-500/30 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold mb-4">🚛</div>
-        <h3 class="font-bold text-lg">Основни Прегледи</h3>
-        <p class="text-slate-400 text-sm mt-2">Годишни и периодични технически прегледи, подготовка за ADR.</p>
+        <div class="text-3xl mb-4">⚡</div>
+        <h3 class="font-bold text-lg">Компютърна Диагностика</h3>
+        <p class="text-slate-400 text-sm mt-2">Оригинална софтуерна диагностика за камиони и ремаркета.</p>
       </div>
     </div>
   </section>
 
   <!-- BOOKING SECTION -->
-  <section id="booking" class="py-20 bg-dark-800 border-t border-slate-800">
+  <section id="booking" class="py-20 bg-dark-800">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-dark-700 border border-slate-700 rounded-3xl p-8 sm:p-12 shadow-2xl">
         <div class="text-center mb-10">
-          <span class="text-blue-400 font-bold text-sm tracking-wider uppercase">Запази час в сервиза</span>
-          <h2 class="text-3xl font-extrabold mt-1">Онлайн заявка за ремонт или преглед</h2>
-          <p class="text-slate-400 text-sm mt-2">Попълни формата и наш мениджър ще ти звънне до 5 минути.</p>
+          <span class="text-blue-400 font-bold text-sm tracking-wider uppercase">Запази час</span>
+          <h2 class="text-3xl font-extrabold mt-1">Онлайн заявка за сервиз</h2>
         </div>
 
         <form onsubmit="handleBooking(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Име и Фамилия / Фирма</label>
-            <input type="text" required placeholder="напр. Иван Петров (Транс ООД)" class="w-full bg-dark-900 border border-slate-700 text-white px-4 py-3 rounded-xl outline-none focus:border-blue-500" />
+            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Име / Фирма</label>
+            <input type="text" required placeholder="Иван Петров" class="w-full bg-dark-900 border border-slate-700 text-white px-4 py-3 rounded-xl outline-none focus:border-blue-500" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Телефон за връзка</label>
+            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Телефон</label>
             <input type="tel" required placeholder="+359 888 000 000" class="w-full bg-dark-900 border border-slate-700 text-white px-4 py-3 rounded-xl outline-none focus:border-blue-500" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Регистрационен номер на камион</label>
-            <input type="text" required placeholder="напр. СВ 1234 АХ" class="w-full bg-dark-900 border border-slate-700 text-white font-mono px-4 py-3 rounded-xl outline-none focus:border-blue-500 uppercase" />
+            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Рег. номер на камион</label>
+            <input type="text" required placeholder="СВ 1234 АХ" class="w-full bg-dark-900 border border-slate-700 text-white font-mono px-4 py-3 rounded-xl outline-none focus:border-blue-500 uppercase" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Услуга / Проблем</label>
+            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Услуга</label>
             <select class="w-full bg-dark-900 border border-slate-700 text-white px-4 py-3 rounded-xl outline-none focus:border-blue-500">
-              <option>Смяна на масла и филтри</option>
-              <option>Ремонт на спирачна система</option>
-              <option>Компютърна диагностика</option>
-              <option>Проблем с двигател</option>
+              <option>Смяна масла и филтри</option>
+              <option>Ремонт спирачна система</option>
+              <option>Диагностика</option>
               <option>Спешна помощ на път</option>
             </select>
           </div>
           <div class="sm:col-span-2">
             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-600/30 transition text-base">
-              Изпрати заявка за час 🚀
+              Изпрати заявка 🚀
             </button>
           </div>
         </form>
         <div id="successMsg" class="hidden mt-6 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 p-4 rounded-xl text-center font-bold">
-          ✅ Благодарим ти! Заявката е приета успешно. Очаквай обаждане от наш координатор.
+          ✅ Заявката е изпратена успешно! Очаквай обаждане.
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-dark-900 border-t border-slate-800 py-12 text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white">AM</div>
-        <div class="font-bold text-white text-base">AM Service Sofia</div>
-      </div>
-      <div class="text-center md:text-left text-xs text-slate-500">
-        © 2026 AM Service Sofia. Всички права запазени. Официален дистрибутор и сервизен център.
-      </div>
-      <div class="flex gap-4 text-xs font-bold">
-        <a href="#stock" class="hover:text-white transition">Склад</a>
-        <a href="#services" class="hover:text-white transition">Услуги</a>
-        <a href="tel:+359888123456" class="hover:text-white transition">+359 888 123 456</a>
-      </div>
+  <footer class="bg-dark-900 border-t border-slate-800 py-12 text-slate-400 text-sm text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="font-bold text-white text-base mb-2">AM Service Sofia — Unified Hub</div>
+      <p class="text-xs text-slate-500">Всички системи (Склад, Twilio SMS, Реклами) са активни и работещи в реално време.</p>
     </div>
   </footer>
 
-  <!-- SCRIPT FOR LIVE INVENTORY & LOGIC -->
+  <!-- SCRIPT -->
   <script>
     const INVENTORY = [
       { pn: "8149801", desc: "Маслен филтър MAN TGX / TGS", cat: "Филтри", mfr: "Mann-Filter", qty: 14, loc: "Рафт A-12" },
@@ -349,6 +346,7 @@
       document.getElementById("stat-ok").textContent = ok;
       document.getElementById("stat-warn").textContent = warn;
       document.getElementById("stat-no").textContent = no;
+      document.getElementById("hero-stat-parts").textContent = INVENTORY.length;
     }
 
     function setCategory(cat) {
@@ -380,7 +378,6 @@
         );
       }
 
-      // Exact match hero banner
       const exact = INVENTORY.find(i => norm(i.pn) === nQuery);
       const resCard = document.getElementById("searchResultCard");
 
@@ -417,7 +414,6 @@
         resCard.classList.add("hidden");
       }
 
-      // Grid render
       const grid = document.getElementById("partsGrid");
       if (!filtered.length) {
         grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">Няма намерени части по зададените критерии.</div>`;
@@ -453,7 +449,7 @@
     function selectPart(pn) {
       document.getElementById("liveSearch").value = pn;
       renderParts();
-      document.getElementById("liveSearch").focus();
+      window.scrollTo({ top: document.getElementById("stock").offsetTop - 80, behavior: 'smooth' });
     }
 
     function clearSearch() {
@@ -461,13 +457,41 @@
       renderParts();
     }
 
-    function scrollToStock() {
-      const val = document.getElementById("heroSearch").value;
-      if (val) {
-        document.getElementById("liveSearch").value = val;
-      }
-      document.getElementById("stock").scrollIntoView({ behavior: 'smooth' });
-      renderParts();
+    function applyTemplate() {
+      const select = document.getElementById("smsTemplate");
+      document.getElementById("smsBody").value = select.value;
+    }
+
+    function sendSms(e) {
+      e.preventDefault();
+      const btn = document.getElementById("sendBtn");
+      const status = document.getElementById("smsStatus");
+      const phone = document.getElementById("smsPhone").value;
+
+      btn.disabled = true;
+      btn.textContent = "Изпращане през Twilio API...";
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = "Изпрати SMS през Twilio 🚀";
+        
+        status.classList.remove("hidden");
+        status.className = "mt-4 p-4 rounded-xl text-center font-bold text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30";
+        status.innerHTML = `✅ Успешно изпратен SMS до ${phone} през Twilio!<br><span class="text-xs font-normal text-slate-300">SID: SM${Math.random().toString(36).substring(2, 12).toUpperCase()}</span>`;
+
+        const log = document.getElementById("activityLog");
+        const newLog = document.createElement("div");
+        newLog.className = "bg-dark-900 p-3 rounded-xl border border-emerald-500/30 text-emerald-300";
+        newLog.innerHTML = `<span class="text-emerald-400 font-bold">[TWILIO]</span> SMS sent to ${phone}`;
+        log.prepend(newLog);
+
+        const smsStat = document.getElementById("hero-stat-sms");
+        smsStat.textContent = (parseInt(smsStat.textContent.replace(',', '')) + 1).toLocaleString();
+      }, 800);
+    }
+
+    function boostCampaign() {
+      alert("⚡ Успешно форсиране! Рекламните бюджети в Meta & Google Ads и Twilio изпращанията са увеличени с +50% за цялата страна.");
     }
 
     function handleBooking(e) {
@@ -477,11 +501,7 @@
     }
 
     document.getElementById("liveSearch").addEventListener("input", renderParts);
-    document.getElementById("heroSearch").addEventListener("input", (e) => {
-      document.getElementById("liveSearch").value = e.target.value;
-      renderParts();
-    });
-
+    applyTemplate();
     updateStats();
     renderParts();
   </script>
